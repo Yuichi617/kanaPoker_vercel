@@ -1,0 +1,197 @@
+/*index.js*/
+.main_screen {
+    margin: 0 auto;
+    width: 1000px;
+    height: 700px;
+    margin-top: 50px;
+    background: url("./images/background.png");
+    animation: bgiLoop 20s linear infinite;
+}
+
+@keyframes bgiLoop {
+    0% { background-position: 0 0;}
+  100% { background-position: 1000px 700px;}
+}
+
+.main_screen h1 {
+    font-size: 72px;
+    text-align: center;
+    padding-top: 140px;
+    font-family: 'YuMincho +36p Kana'; 
+    font-weight: normal;
+}
+
+/* StartForm.js */
+.start_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.start_form .content {
+    margin: 0 auto;
+}
+
+.start_form .content p {
+    width: 350px;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.start_form input[type="text"] {
+    height: 50px;
+    background: white;
+    padding-left: 5px;
+    border: double #afafaf;
+}
+
+.start_form input[type="submit"] {
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 35px;
+    width: 280px;
+    height: 80px;
+    text-align: center;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 15px;
+}
+
+/* KeywordForm.js */
+.keyword_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.keyword_form .content {
+    margin: 0 auto;
+}
+
+.keyword_form .content p {
+    width: 350px;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.keyword_form input[type="text"] {
+    height: 50px;
+    background: white;
+    padding-left: 5px;
+    border: double #afafaf;
+}
+
+/* .keyword_form input[type="submit"] {
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 35px;
+    width: 280px;
+    height: 80px;
+    text-align: center;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 15px;
+} */
+
+.keyword_form .inputButton {
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 35px;
+    padding: 20px 90px;
+    text-align: center;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* WaitingRoom.js */
+.waiting_room h1 {
+    padding-top: 80px;
+}
+
+.waiting_room ul {
+    list-style: none;
+    text-align: center;
+    font-size: 30px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.waiting_room ul li {
+    padding-top: 50px;
+    border-bottom: solid 1px ;
+}
+
+.waiting_room button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+    font-size: 30px;
+    width: 250px;
+    height: 60px;
+    text-align: center;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 15px;
+}
+
+/* game_page.js */
+.game_screen {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1000px;
+    height: 700px;
+    margin-top: 50px;
+    background: url("./images/background.png");
+}
+
+.game_screen h1 {
+    font-size: 72px;
+    text-align: center;
+    padding-top: 80px;
+    font-family: 'YuMincho +36p Kana'; 
+    font-weight: normal;
+}
+
+.game_screen .card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    height: 200px;
+}
+
+.game_screen .card-container a {
+    cursor: pointer;
+    margin: 0 10px;
+    margin-top: 10px;
+}
+
+.game_screen div {
+    text-align: center;
+}
+
+.game_screen .exchange_button {
+    margin: 0 auto;
+    font-size: 25px;
+    margin-top: 20px;
+    padding: 20px 55px;
+    text-align: center;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.game_screen .decision_button {
+    margin: 0 auto;
+    font-size: 35px;
+    margin-top: 50px;
+    padding: 20px 90px;
+    text-align: center;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    cursor: pointer;
+}
