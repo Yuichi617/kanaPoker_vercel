@@ -136,8 +136,8 @@
     border-radius: 15px;
 }
 
-/* game_page.js */
-.game_screen {
+/* exchange_page.js */
+.exchange_screen {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -147,7 +147,7 @@
     background: url("./images/background.png");
 }
 
-.game_screen h1 {
+.exchange_screen h1 {
     font-size: 72px;
     text-align: center;
     padding-top: 80px;
@@ -155,24 +155,28 @@
     font-weight: normal;
 }
 
-.game_screen .card-container {
+.exchange_screen .card-container {
     display: flex;
     justify-content: center;
     margin-top: 70px;
     height: 200px;
 }
 
-.game_screen .card-container a {
+.exchange_screen .card-container .card {
     cursor: pointer;
     margin: 0 10px;
     margin-top: 10px;
 }
 
-.game_screen div {
+.exchange_screen .card-container .card.select {
+    transform: translateY(-20px);
+}
+
+.exchange_screen div {
     text-align: center;
 }
 
-.game_screen .exchange_button {
+.exchange_screen .exchange_button {
     margin: 0 auto;
     font-size: 25px;
     margin-top: 20px;
@@ -184,11 +188,81 @@
     cursor: pointer;
 }
 
-.game_screen .decision_button {
+.exchange_screen .exchange_button.used {
+    color: gray;
+    pointer-events: none;
+}
+
+.exchange_screen .decision_button {
     margin: 0 auto;
     font-size: 35px;
     margin-top: 50px;
     padding: 20px 90px;
+    text-align: center;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* arrange_page.js */
+.arrange_screen {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1000px;
+    height: 700px;
+    margin-top: 50px;
+    background: url("./images/background.png");
+}
+
+.arrange_screen h1 {
+    font-size: 72px;
+    text-align: center;
+    padding-top: 80px;
+    font-family: 'YuMincho +36p Kana'; 
+    font-weight: normal;
+}
+
+.arrange_screen .card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+
+}
+
+.arrange_screen .card-container .card {
+    cursor: pointer;
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+.arrange_screen .card-container .card.select {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.arrange_screen div {
+    text-align: center;
+}
+
+.arrange_screen .reset_button {
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 25px;
+    padding: 15px 40px;
+    text-align: center;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.arrange_screen .decision_button {
+    margin: 0 auto;
+    font-size: 30px;
+    margin-top: 28px;
+    padding: 18px 80px;
     text-align: center;
     background: white;
     border: 1px solid #707070;

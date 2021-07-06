@@ -5,7 +5,7 @@ import thunkMiddleware from 'redux-thunk'
 const initialState = {
   name: '',
   keyword: '',
-  card_id_set: []
+  card_id: [0,0,0,0,0]
 }
 
 // REDUCERS
@@ -15,21 +15,21 @@ function reducer (state=initial, action) {
             return {
                 name: action.name,
                 keyword: state.keyword,
-                card_id_set: state.card_id_set
+                card_id: state.card_id
             };
 
         case 'SET_KEYWORD':
             return {
                 name: state.name,
                 keyword: action.keyword,
-                card_id_set: state.card_id_set
+                card_id: state.card_id
             };
         
         case 'SET_CARD_ID':
             return {
                 name: state.name,
                 keyword: state.keyword,
-                card_id_set: action.card_id_set
+                card_id: action.card_id
             }
         default:
             return state;
@@ -54,7 +54,7 @@ export function SetKeyword(text) {
 export function SetCardId(array) {
     return {
         type: 'SET_CARD_ID',
-        keyword: array
+        card_id: array
     }
 }
 

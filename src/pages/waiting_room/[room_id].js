@@ -58,6 +58,7 @@ function WaitingRoom(props) {
   const onCollectionUpdate = async() => {
     console.log("updateData");
     const userData = await getData();
+    // dbが更新されるたびに実行されてしまう。（後でなんとかする）
     await judgeReady(userData[1]);
   }
 
