@@ -1,5 +1,5 @@
-import '../public/reset.css'
-import '../public/style.css'
+import '../../public/reset.css'
+import '../../public/style.css'
 import App, { Container } from 'next/app';
 import React from 'react';
 import withReduxStore from '../lib/redux-store';
