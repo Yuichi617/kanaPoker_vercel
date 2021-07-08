@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { connect } from 'react-redux'
 import ResetButton from './ResetButton'
 import ArrangeCards from './ArrangeCards'
+import DecisionButton from './DecisionButton'
 
 function ArrangeField(props) {
 
@@ -10,6 +11,8 @@ function ArrangeField(props) {
     const [selectOrder, setSelectOrder] = useState([]);
     // 選択されているかどうかを格納する配列
     const [select, setSelect] = useState([false, false, false, false, false]);
+    // 並び替えたカードを格納する配列
+    const [arrangeCardID, setArrangeCardID] = useState([]);
 
     // 画像ファイルへのパスを作成
     const card_image = props.card_id.map(x => "/images/kanaCard/" + x + ".png");
@@ -24,16 +27,19 @@ function ArrangeField(props) {
         const selectOrder_copy = selectOrder.slice();
         selectOrder_copy.push(Number(card_id));
         setSelectOrder(selectOrder_copy);
-        console.log(selectOrder);
-        console.log(select);
+        // arrangeCardIDの更新
+        const arrange_card_id_copy = selectOrder_copy.map(x => props.card_id[x]);
+        setArrangeCardID(arrange_card_id_copy);
+        // console.log(arrangeCardID);
     }
 
-        // ResetButtonに渡す関数
-        const reset = () => {
-            // カードを選択されていない状態にする
-            setSelectOrder([]);
-            setSelect([false, false, false, false, false]);
-        }
+    // ResetButtonに渡す関数
+    const reset = () => {
+        // カードを選択されていない状態にする
+        setSelectOrder([]);
+        setArrangeCardID([]);
+        setSelect([false, false, false, false, false]);
+    }
 
     return (
         <div>
@@ -44,8 +50,9 @@ function ArrangeField(props) {
                 <a className={"card" + " " + `${select[3] ? "select":""}`} data-id="3" onClick={doClick}><Image src={card_image[3]} alt="card4" width={108} height={136} /></a>
                 <a className={"card" + " " + `${select[4] ? "select":""}`} data-id="4" onClick={doClick}><Image src={card_image[4]} alt="card5" width={108} height={136} /></a>
             </div>
-            <ArrangeCards selectOrder={selectOrder}/>
+            <ArrangeCards selectOrder={selectOrder} />
             <ResetButton doClick={reset}/>
+            <DecisionButton arrangeCardID={arrangeCardID}/>
         </div>
 
     )

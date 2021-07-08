@@ -107,29 +107,43 @@
 
 /* WaitingRoom.js */
 .waiting_room h1 {
-    padding-top: 80px;
+    font-size: 50px;
+    padding-top: 40px;
 }
 
 .waiting_room ul {
     list-style: none;
     text-align: center;
-    font-size: 30px;
-    width: 400px;
+    font-size: 25px;
+    width: 350px;
     margin: 0 auto;
 }
 
 .waiting_room ul li {
-    padding-top: 50px;
+    padding-top: 40px;
     border-bottom: solid 1px ;
 }
 
-.waiting_room button {
+.waiting_room .ready_button {
     display: block;
     margin: 0 auto;
-    margin-top: 60px;
-    font-size: 30px;
-    width: 250px;
-    height: 60px;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 15px;
+}
+
+.waiting_room .leave_button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
     text-align: center;
     background: white;
     border: 1px solid #707070;
@@ -228,7 +242,7 @@
     display: flex;
     justify-content: center;
     margin-top: 25px;
-
+    height: 165px;
 }
 
 .arrange_screen .card-container .card {
@@ -268,4 +282,37 @@
     border: 1px solid #707070;
     border-radius: 20px;
     cursor: pointer;
+}
+
+/* wating_page.js */
+.waiting_screen {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1000px;
+    height: 700px;
+    margin-top: 50px;
+    background: url("./images/background.png");
+    animation: bgiLoop 20s linear infinite;
+}
+
+.waiting_screen h1 {
+    font-size: 72px;
+    text-align: center;
+    padding-top: 150px;
+    font-family: 'YuMincho +36p Kana'; 
+    font-weight: normal;
+}
+
+.waiting_screen .card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    height: 200px;
+}
+
+.waiting_screen .card-container .card {
+    cursor: pointer;
+    margin: 0 10px;
+    margin-top: 10px;
 }

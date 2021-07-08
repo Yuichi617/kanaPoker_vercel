@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
 import ArrangeField from '../components/arrangePage/ArrangeField'
-import DecisionButton from '../components/arrangePage/DecisionButton'
 
 function ArraangePage(props) {
 
@@ -8,7 +7,6 @@ function ArraangePage(props) {
         <div className="arrange_screen">
             <h1>並び替えフェーズ</h1>
             <ArrangeField />
-            <DecisionButton />
         </div>
     );
   }

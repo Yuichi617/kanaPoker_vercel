@@ -23,7 +23,7 @@ function LeaveButton(props) {
 
     return (
         <div>
-            <button type="button" onClick={doClick}>退室</button>
+            <button type="button" className="leave_button" onClick={doClick}>退室</button>
         </div>
   );
 }

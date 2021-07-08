@@ -16,6 +16,8 @@ function KeywordForm(props) {
         db.collection("rooms").doc(keyword).collection("users").doc(props.name).set({
             name: props.name,
             ready: 0,
+            participate: false,
+            decision: 0
         })
     }
 
@@ -44,7 +46,7 @@ function KeywordForm(props) {
         props.dispatch(SetKeyword(keyword));
         await addData();
         const users = await getData();
-        if(users.length === 5) {
+        if(users.length === 7) {
             await removeData();
             alert("満室です");
         } else {

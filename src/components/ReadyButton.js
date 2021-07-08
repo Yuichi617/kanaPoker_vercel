@@ -17,7 +17,7 @@ function ReadyButton(props) {
 
     return (
         <div>
-            <button type="button" onClick={doClick}>準備完了</button>
+            <button type="button" className="ready_button" onClick={doClick}>準備完了</button>
         </div>
   );
 }
