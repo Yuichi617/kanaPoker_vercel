@@ -10,11 +10,44 @@ function WaitingPage(props) {
   const card_image = props.arrange_card_id.map(x => "/images/kanaCard/" + x + ".png");
 
   useEffect(()=>{
+
     console.log("hello waiting_page");
-    // アクションドキュメントの作成
-    db.collection("rooms").doc(props.keyword).collection("action").doc("order").set({
-      order: 0
-    })
+
+    const f = async() => {
+
+      // アクションドキュメントがなければ作成(最初に入った人が作成)
+      const itemsRef = db.collection("rooms").doc(props.keyword).collection("action");
+      
+      const itemRef = itemsRef.doc('order');
+      const doc = await itemRef.get();
+  
+      if (doc.exists) {
+        console.log("action document ordre already exist");
+      } else {
+        console.log("add action document");
+        db.collection("rooms").doc(props.keyword).collection("action").doc("order").set({
+          order: 0
+        })
+      }
+
+      // オープンドキュメントがなければ作成(最初に入った人が作成)
+      const itemsRef2 = db.collection("rooms").doc(props.keyword).collection("open");
+      
+      const itemRef2 = itemsRef2.doc('open');
+      const doc2 = await itemRef2.get();
+  
+      if (doc2.exists) {
+        console.log("open document ordre already exist");
+      } else {
+        console.log("add open document");
+        db.collection("rooms").doc(props.keyword).collection("open").doc("open").set({
+          open: false
+        })
+      }
+
+    }
+
+    f();
   },[])
 
     return (
