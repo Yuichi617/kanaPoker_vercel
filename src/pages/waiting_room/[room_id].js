@@ -47,8 +47,8 @@ function WaitingRoom(props) {
 
   // 画面遷移の判定(1回目)
   const judgeReady = async(UserData) => {
-    // まだ参加してなかったら実行(インデックスは後で調整)
-    if(UserData[2][0] === false) {
+    // まだ参加してなかったら実行(一つでもfalseなら実行)
+    if(UserData[2].some(val => val===false)=== true) {
       console.log("judgeReady");
       // readyの和を計算
       const sum_user = UserData[1].length;
@@ -67,7 +67,7 @@ function WaitingRoom(props) {
   // 画面遷移の判定(2回目)
   const judgeDecision = async(UserData) => {
     // 参加していたら実行(インデックスは後で調整)
-    if(UserData[2][0] === true) {
+    if(UserData[2].every(val => val===true) === true) {
       console.log("judgeDecision");
       // readyの和を計算
       const sum_user = UserData[3].length;

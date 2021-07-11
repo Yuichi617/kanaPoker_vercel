@@ -14,7 +14,7 @@ function DecisionButton(props) {
             decision: 1
         }, { merge: true })
     }
-
+    
     const doClick = async() => {
         // 並び替えたカードをストアに登録
         props.dispatch(SetArrangeCardId(props.arrangeCardID));

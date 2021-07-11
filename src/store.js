@@ -17,7 +17,8 @@ function reducer (state=initial, action) {
                 name: action.name,
                 keyword: state.keyword,
                 card_id: state.card_id,
-                arrange_card_id: state.arrange_card_id
+                arrange_card_id: state.arrange_card_id,
+                playing: state.playing
             };
 
         case 'SET_KEYWORD':
@@ -25,7 +26,8 @@ function reducer (state=initial, action) {
                 name: state.name,
                 keyword: action.keyword,
                 card_id: state.card_id,
-                arrange_card_id: state.arrange_card_id
+                arrange_card_id: state.arrange_card_id,
+                playing: state.playing
             };
         
         case 'SET_CARD_ID':
@@ -33,7 +35,8 @@ function reducer (state=initial, action) {
                 name: state.name,
                 keyword: state.keyword,
                 card_id: action.card_id,
-                arrange_card_id: state.arrange_card_id
+                arrange_card_id: state.arrange_card_id,
+                playing: state.playing
             }
 
         case 'SET_ARRANGE_CARD_ID':
@@ -41,8 +44,10 @@ function reducer (state=initial, action) {
                 name: state.name,
                 keyword: state.keyword,
                 card_id: state.card_id,
-                arrange_card_id: action.arrange_card_id
+                arrange_card_id: action.arrange_card_id,
+                playing: state.playing
             }
+
         default:
             return state;
     }

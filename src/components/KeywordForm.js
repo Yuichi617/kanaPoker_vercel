@@ -44,6 +44,7 @@ function KeywordForm(props) {
     const doClick = async () => {
         // キーワードをストアに追加
         props.dispatch(SetKeyword(keyword));
+
         await addData();
         const users = await getData();
         if(users.length === 7) {
