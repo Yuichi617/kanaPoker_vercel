@@ -169,15 +169,6 @@ function GamePage(props) {
 
     },[order])
 
-    useEffect(()=>{
-        // アンマウント時に実行
-        return async () => {
-            console.log('unmounting...');
-            // unsubscribe1();
-            // unsubscribe2();
-        }
-    },[])
-
     return (
       <div>
         <div className="main_screen">

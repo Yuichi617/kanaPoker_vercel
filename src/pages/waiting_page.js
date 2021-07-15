@@ -59,7 +59,7 @@ function WaitingPage(props) {
             })
             }
             </div>
-            <p className="text">あなたの手札</p>
+            {/* <p className="text">あなたの手札</p> */}
         </div>
     );
   }

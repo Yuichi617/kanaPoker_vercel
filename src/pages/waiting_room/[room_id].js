@@ -107,7 +107,7 @@ function WaitingRoom(props) {
             <h1>参加者</h1>
             <UserList userNames={userNames}/>
             <ReadyButton />
-            <LeaveButton />
+            {/* <LeaveButton /> */}
         </div>
       </div>
     );

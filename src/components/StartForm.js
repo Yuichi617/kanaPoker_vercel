@@ -18,12 +18,13 @@ function StartForm(props) {
     return (
         <div className="start_form">
             <div className="content">
-                <p><label>名前</label></p>
-                <p><input type="text" value={name} onChange={doChange}/></p>
+                {/* <p><label>名前</label></p> */}
+                <input type="text" value={name}  placeholder="なまえ" onChange={doChange}/>
             </div>
             <Link href="./keyword_page">
-                <input type="submit" value="スタート" onClick={doClick} />
+                <input type="submit" value="はじめる" onClick={doClick} />
             </Link>
+            <p className="Version_text">Ver.1.0.0</p>
         </div>
   );
 }

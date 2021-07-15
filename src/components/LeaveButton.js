@@ -18,7 +18,7 @@ function LeaveButton(props) {
 
     const doClick = async() => {
         await removeData();
-        router.push('../keyword_page');
+        router.push('/keyword_page');
     }
 
     return (

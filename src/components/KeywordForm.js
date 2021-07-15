@@ -62,7 +62,7 @@ function KeywordForm(props) {
     return (
         <div className="keyword_form">
             <div className="content">
-                <p><input type="text" value={keyword} onChange={doChange}/></p>
+                <input type="text" value={keyword} onChange={doChange}/>
             </div>
             <a className="inputButton" onClick={doClick}>決定</a>
         </div>

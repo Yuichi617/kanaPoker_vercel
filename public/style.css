@@ -32,29 +32,38 @@
     margin: 0 auto;
 }
 
-.start_form .content p {
+/* .start_form .content p {
     width: 350px;
     font-size: 30px;
     padding-bottom: 5px;
-}
+} */
 
 .start_form input[type="text"] {
+    width: 350px;
     height: 50px;
+    font-size: 22px;
     background: white;
-    padding-left: 5px;
-    border: double #afafaf;
+    padding-left: 10px;
+    border: solid 1px #afafaf;
+    border-radius: 10px;
 }
 
 .start_form input[type="submit"] {
     margin: 0 auto;
     margin-top: 40px;
-    font-size: 35px;
-    width: 280px;
-    height: 80px;
+    font-size: 20px;
+    width: 180px;
+    height: 50px;
     text-align: center;
     background: white;
     border: 1px solid #707070;
     border-radius: 15px;
+}
+
+.start_form .Version_text {
+    margin-top: 160px;
+    margin-right: 20px;
+    text-align: right;
 }
 
 /* KeywordForm.js */
@@ -68,17 +77,15 @@
     margin: 0 auto;
 }
 
-.keyword_form .content p {
+.keyword_form input[type="text"] {
     width: 350px;
+    height: 50px;
     font-size: 30px;
     padding-bottom: 5px;
-}
-
-.keyword_form input[type="text"] {
-    height: 50px;
     background: white;
-    padding-left: 5px;
-    border: double #afafaf;
+    padding-left: 10px;
+    border: solid 1px #afafaf;
+    border-radius: 10px;
 }
 
 /* .keyword_form input[type="submit"] {
@@ -96,8 +103,8 @@
 .keyword_form .inputButton {
     margin: 0 auto;
     margin-top: 40px;
-    font-size: 35px;
-    padding: 20px 90px;
+    font-size: 20px;
+    padding: 18px 80px;
     text-align: center;
     background: white;
     border: 1px solid #707070;
@@ -137,6 +144,11 @@
     border-radius: 15px;
 }
 
+.waiting_room .ready_button.used {
+    color: gray;
+    pointer-events: none;
+}
+
 .waiting_room .leave_button {
     display: block;
     margin: 0 auto;
@@ -159,6 +171,7 @@
     height: 700px;
     margin-top: 50px;
     background: url("./images/background.png");
+    animation: bgiLoop 20s linear infinite;
 }
 
 .exchange_screen h1 {
@@ -192,9 +205,9 @@
 
 .exchange_screen .exchange_button {
     margin: 0 auto;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 20px;
-    padding: 20px 55px;
+    padding: 18px 50px;
     text-align: center;
     background: white;
     border: 1px solid #707070;
@@ -209,9 +222,9 @@
 
 .exchange_screen .decision_button {
     margin: 0 auto;
-    font-size: 35px;
+    font-size: 25px;
     margin-top: 50px;
-    padding: 20px 90px;
+    padding: 15px 80px;
     text-align: center;
     background: white;
     border: 1px solid #707070;
@@ -228,6 +241,7 @@
     height: 700px;
     margin-top: 50px;
     background: url("./images/background.png");
+    animation: bgiLoop 20s linear infinite;
 }
 
 .arrange_screen h1 {
@@ -262,9 +276,9 @@
 
 .arrange_screen .reset_button {
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 25px;
-    padding: 15px 40px;
+    padding: 13px 35px;
     text-align: center;
     background: white;
     border: 1px solid #707070;
@@ -274,9 +288,9 @@
 
 .arrange_screen .decision_button {
     margin: 0 auto;
-    font-size: 30px;
-    margin-top: 28px;
-    padding: 18px 80px;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 15px 70px;
     text-align: center;
     background: white;
     border: 1px solid #707070;
@@ -347,11 +361,27 @@
     flex-direction: column;
 }
 
-.do button {
+.do .card-container {
+    margin-bottom: 0;
+}
+
+.do .open_button {
     margin: 0 auto;
     font-size: 20px;
     margin-top: 25px;
     padding: 15px 40px;
+    text-align: center;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.do .next_button {
+    margin: 0 auto;
+    font-size: 22px;
+    margin-top: 70px;
+    padding: 18px 70px;
     text-align: center;
     background: white;
     border: 1px solid #707070;

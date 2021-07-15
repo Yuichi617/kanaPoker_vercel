@@ -38,8 +38,8 @@ function Do (props) {
                 }
             })()}
        
-        <button type="button" className="open_button button" onClick={props.doOpen}>Open</button>
-        <button type="button" className="next_button button" onClick={props.doClick}>Next</button>
+        <button type="button" className="open_button" onClick={props.doOpen}>Open</button>
+        <button type="button" className="next_button" onClick={props.doClick}>Next</button>
       </div>
     );
   }
