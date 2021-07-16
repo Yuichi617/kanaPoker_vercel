@@ -47,7 +47,7 @@ function KeywordForm(props) {
 
         await addData();
         const users = await getData();
-        if(users.length === 7) {
+        if(users.length === 8) {
             await removeData();
             alert("満室です");
         } else {
