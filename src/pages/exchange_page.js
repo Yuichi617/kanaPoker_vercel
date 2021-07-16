@@ -8,7 +8,7 @@ function ExchangePage(props) {
 
     useEffect(()=>{
         // 1〜51までの配列を作る
-        let arr = [...Array(51)].map((_, i) => i+1);
+        let arr = [...Array(56)].map((_, i) => i+1);
         let a = arr.length;
         //1〜52までの配列をシャッフル
         while (a) {
@@ -26,7 +26,7 @@ function ExchangePage(props) {
 
     return (
         <div className="exchange_screen">
-            <h1>手札決定フェーズ</h1>
+            <h1>手札を決めてください</h1>
             <CardList />
             <DecisionButton />
         </div>

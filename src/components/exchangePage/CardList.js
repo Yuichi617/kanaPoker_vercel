@@ -36,7 +36,7 @@ function CardList(props) {
         }
         
         // 1〜51までの配列を作る
-        let arr = [...Array(51)].map((_, i) => i+1);
+        let arr = [...Array(56)].map((_, i) => i+1);
         //  今選択されているカードを抜く
         for (let i=0;i<5;i++) {
             arr.splice(props.card_id[i]-1,1);

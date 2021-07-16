@@ -37,7 +37,7 @@ function ResultPage(props) {
       <div>
         <div className="main_screen">
           <div className="result_screen">
-            <h1>終わり</h1>
+            <h1>おわり</h1>
             <button type="button" onClick={doClick}>Topへ</button>
           </div>
         </div>
